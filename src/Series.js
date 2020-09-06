@@ -25,7 +25,7 @@ const Series = () => {
         <th scope='row'>{record.id}</th>
         <td>{record.name}</td>
         <td className='d-flex justify-content-around'>
-          <Link to={'/generos/' + record.id} className='btn btn-warning'>Editar</Link>
+          <Link to={'/series/' + record.id} className='btn btn-warning'>Info</Link>
           <button className='btn btn-danger' onClick={() => deleteSerie(record.id)}>Remover</button>
         </td>
       </tr>
@@ -34,12 +34,15 @@ const Series = () => {
 
   if (data.length === 0){
     return (
-      <div className='container'>
-        <h1>Séries</h1>
-        <div class='alert alert-warning' role='alert'>
-          Você não possui séries cadastrados.
+        <div className='container'>
+          <h2 className='mt-3'>Séries</h2>
+          <div class='alert alert-warning' role='alert'>
+            Você não possui séries cadastradas.
+          </div>
+          <div className='mt-2 d-flex justify-content-end'>
+            <Link to='/series/novo' className='btn btn-primary'>Adicionar nova série</Link>
+          </div>
         </div>
-      </div>
     )
   }
 

@@ -39,6 +39,9 @@ const Generos = () => {
         <div class='alert alert-warning' role='alert'>
           Você não possui gêneros cadastrados.
         </div>
+        <div className='mt-2 d-flex justify-content-end'>
+          <Link to='/generos/novo' className='btn btn-primary'>Criar novo gênero</Link>
+      </div>
       </div>
     )
   }
@@ -47,7 +50,7 @@ const Generos = () => {
     <div className='container'>
       <h2 className='mt-3'>Gêneros</h2>
       <div className='mb-2 d-flex justify-content-end'>
-        <Link to='/generos/novo' className='btn btn-primary'>Criar novo</Link>
+        <Link to='/generos/novo' className='btn btn-primary'>Criar novo gênero</Link>
       </div>
       <table className='table table-striped table-dark'>
         <thead>
